@@ -30,7 +30,7 @@ public class Elevador {
     }
 
     public void elevadorDesce(int d) {
-        this.andarAtual = andarAtual - d;
+        this.andarAtual = d;
     }
 
     public void pessoaEntra(int e) {
