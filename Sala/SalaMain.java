@@ -1,4 +1,4 @@
-package Projetos;
+package Projetos.Sala;
 
 public class SalaMain {
     public static void main(String[] args) {
