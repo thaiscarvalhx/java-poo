@@ -1,4 +1,4 @@
-package Projetos.Sala;
+package POO.Sala;
 
 public class Materia {
 
