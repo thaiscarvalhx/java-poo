@@ -17,7 +17,7 @@ public class TelevisaoMain {
         controle1.aumentarVol();
         controle1.situacao();
 
-        controle1.escolherCan(10);
+        controle1.escolherCan(9);
         controle1.situacao();
 
     }
