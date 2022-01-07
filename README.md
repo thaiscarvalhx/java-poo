@@ -1,6 +1,6 @@
 # java-poo
 
-# :tv: ControleRemoto
+# :tv: Controle Remoto
 Classe CONTROLE com atributos volume, canal; <br/>
 Classe TELEVISAO como main.
 
