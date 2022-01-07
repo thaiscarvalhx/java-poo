@@ -13,7 +13,7 @@ Classe HOSPEDAGEM com atributo valor; <br/>
 Classe HOSPEDAGEMVIP com extend HOSPEDAGEM e adicional de R$120,00; <br/>
 Classe HOTEL como main.
 
-# Sala
+# :school_satchel: Sala 
 Classe ALUNO com atributos nome, ra; <br/> 
 Classe MATERIA com atributos materiaAula, professor, horário; <br/>
 Classe SALA como main.
