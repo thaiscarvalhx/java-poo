@@ -31,35 +31,43 @@ public class Veiculo {
     public
     String situacao() {
         System.out.println("{" +
+                "O carro está ligado? " + isLigado + '\n' +
+                "combustivel = " + litrosCombustivel + '\n' +
+                "velocidade = " + velocidade + '\n' +
                 "marca = " + marca + '\n' +
                 "modelo = " + modelo + '\n' +
                 "placa = " + placa + '\n' +
                 "cor = " + cor + '\n' +
-                "km = " + km + '\n' +
-                "está ligado? " + isLigado + '\n' +
-                "combustivel = " + litrosCombustivel + '\n' +
-                "velocidade = " + velocidade + '\n' +
                 "preco = " + preco +
                 '}');
          return null;
     }
 
-
-
     void acelerar(){
-        this.velocidade = velocidade + 20;
+        if(velocidade == 240){
+            System.out.println("Velocidade máxima atingida. Diminua a " +
+                    "velocidade.");
+        } else {
+            this.velocidade = velocidade + 20;;
+        }
     }
 
     void abastecer(int combustivel){
-        if(combustivel < 60){
-            this.litrosCombustivel = litrosCombustivel + combustivel;
-        } else if(combustivel == 60){
+        this.litrosCombustivel += combustivel;
+        if (litrosCombustivel >= 60) {
+            this.litrosCombustivel = 60;
             System.out.println("O tanque de combustível está cheio.");
         }
     }
 
     void frear(){
-        this.velocidade = velocidade - 20;
+        if(velocidade == 0){
+            System.out.println("Velocidade mínima atingida. Caso queira " +
+                    "desligar o carro, digite o comando DESLIGAR, caso não, " +
+                    "acelere.");
+        } else {
+            this.velocidade = velocidade - 20;
+        }
     }
 
     void pintar(String cor){
@@ -69,13 +77,17 @@ public class Veiculo {
     void ligar(){
         if(velocidade == 0){
             this.velocidade = velocidade + 10;
+        } else {
+            System.out.println("O carro está ligado.");
         }
     }
 
     void desligar(){
         if(velocidade == 0){
+            this.isLigado = false;
             System.out.println("O carro está desligado.");
         } else {
+            this.isLigado = true;
             System.out.println("Diminua a velocidade para 0km/hr para " +
                     "desligar o carro.");
         }
